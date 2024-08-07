@@ -1,0 +1,12 @@
+@layer base {
+  html {
+    @apply w-full h-full;
+    &.lock-scroll {
+      @apply fixed overflow-y-scroll;
+    }
+  }
+  
+  body {
+    @apply bg-content-bg;
+  }
+}
