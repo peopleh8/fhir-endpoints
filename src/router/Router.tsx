@@ -9,7 +9,7 @@ import NotFound from '../pages/NotFound/NotFound'
 import PublicRoute from './PublicRoute'
 import PrivateRoute from './PrivateRoute'
 
-const isAuth = false
+const isAuth = true
 
 const Router: FC = () => {
   return (
