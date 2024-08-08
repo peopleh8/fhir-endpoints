@@ -1,8 +1,11 @@
 import { FC } from 'react'
+import MenuList from './MenuList'
 
 const Menu: FC = () => {
   return (
-    <div>Menu</div>
+    <div>
+      <MenuList />
+    </div>
   )
 }
 

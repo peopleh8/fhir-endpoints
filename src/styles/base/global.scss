@@ -6,7 +6,16 @@
     }
   }
   
-  body {
-    @apply bg-content-bg;
+  .icon {
+    @apply block;
+    svg,
+    img {
+      @apply block w-full h-full text-white;
+    }
+    &--dark {
+      svg {
+        @apply text-black;
+      }
+    }
   }
 }

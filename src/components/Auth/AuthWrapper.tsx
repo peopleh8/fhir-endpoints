@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { PageProps } from '../types/common.types'
+import { PageProps } from '../../types/common.types'
 import classNames from 'classnames'
 
 const AuthWrapper: FC<PageProps> = ({ children }) => {

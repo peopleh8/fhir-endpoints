@@ -1,8 +1,8 @@
 import { FC } from 'react'
 import { Outlet } from 'react-router'
-import PageWrapper from '../components/PageWrapper'
+import PageWrapper from '../components/Page/PageWrapper'
+import PageContent from '../components/Page/PageContent'
 import Sidebar from '../components/Sidebar'
-import PageContent from '../components/PageContent'
 
 const MainLayout: FC = () => {
   return (
