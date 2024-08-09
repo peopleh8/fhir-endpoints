@@ -5,11 +5,13 @@ import { ReactComponent as FileManagerIcon } from '../../assets/icons/file-manag
 const MenuItem: FC = () => {
   return (
     <li>
-      <NavLink to='#' className='flex items-center gap-7'>
+      <NavLink to='/' className='group flex items-center gap-7'>
         <span className='icon w-6 h-6'>
-          <FileManagerIcon />
+          <FileManagerIcon className='group-hover:fill-primary fill-decor transition-colors duration-300' />
         </span>
-        <span className='text-menu-lg font-inter font-semibold'>File management</span>
+        <span className='group-hover:text-primary text-menu-lg font-inter font-semibold transition-colors duration-300'>
+          File management
+        </span>
       </NavLink>
     </li>
   )

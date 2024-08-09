@@ -8,10 +8,11 @@ import NotFoundLayout from '../layouts/NotFoundLayout'
 import NotFound from '../pages/NotFound/NotFound'
 import PublicRoute from './PublicRoute'
 import PrivateRoute from './PrivateRoute'
-
-const isAuth = true
+import { useTypedSelector } from '../hooks/use-types-selector'
 
 const Router: FC = () => {
+  const { isAuth } = useTypedSelector(state => state.user)
+  
   return (
     <Routes>
       <Route element={<PublicRoute isAuth={isAuth} />}>

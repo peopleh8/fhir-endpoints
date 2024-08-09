@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { PageProps } from '../../types/common.types'
+import { ChildProps } from '../../types/common.types'
 import classNames from 'classnames'
 
-const AuthContent: FC<PageProps> = ({ children }) => {
+const AuthContent: FC<ChildProps> = ({ children }) => {
   const generalClasses = 'max-w-[410px] w-full'
   const classes = classNames(generalClasses)
   

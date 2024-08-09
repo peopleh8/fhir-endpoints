@@ -19,6 +19,7 @@ export default {
         'social-login-lg': ['14px', '20px'],
         'divider': ['14px', '24px'],
         'label': ['14px', '14px'],
+        'link': ['14px', '20px'],
       },
       colors: {
         'primary': '#0068FF',
@@ -30,6 +31,8 @@ export default {
         'border': '#D1D9E2',
         'social-login': '#F4F7FE',
         'social-login-hover': '#e5e8f1',
+        'decor': '#707EAE',
+        'error': '#F87171',
       },
       fontFamily: {
         'avenir': ['Avenir', 'sans-serif'],

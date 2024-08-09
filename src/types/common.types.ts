@@ -1,8 +1,8 @@
-import { ReactElement, ReactNode } from 'react'
+import { FormEvent, ReactElement, ReactNode } from 'react'
 
 export type ChildType = ReactNode | ReactElement
 
-export interface PageProps {
+export interface ChildProps {
   children: ChildType
 }
 
@@ -23,8 +23,13 @@ export interface CheckboxProps {
   [key: string]: any
 }
 
+export type FormValues = {
+  [key: string]: any
+}
 export interface FormProps {
   children: ChildType
+  onSubmit: (data: FormValues) => void
+  extraClasses?: string
 }
 
 export interface DescProps {
