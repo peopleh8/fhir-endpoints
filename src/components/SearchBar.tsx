@@ -13,10 +13,10 @@ const SearchBar: FC = () => {
       onSubmit={onSubmit}
     >
       <Input
-        extraClasses='flex-1'
         placeholder='Search patient id, name...'
         type='text'
         name='search'
+        extraClasses='flex-1'
       />
       <Button 
         label='Search'

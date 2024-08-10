@@ -1,14 +1,38 @@
 import { FC } from 'react'
-import { ButtonProps } from '../../types/common.types'
 import classNames from 'classnames'
+import { ButtonProps, ButtonVariants } from '../../types/common.types'
 
-const Button: FC<ButtonProps> = ({ label, onClick, extraClasses, Icon, ...props }) => {
-  const isIcon = Icon && 'pl-9'
-  const logicClasses = classNames(isIcon)
+const Button: FC<ButtonProps> = ({ 
+  label, 
+  variant = ButtonVariants.contained,
+  onClick, 
+  Icon, 
+  extraClasses, 
+  ...props 
+}) => {
+  const containedIconClasses = classNames(Icon && 'pl-9')
+
+
+  if (variant === ButtonVariants.text) {
+    return (
+      <button
+        className='group flex items-center gap-0.5'
+        onClick={onClick}
+        {...props}
+      >
+        { Icon && (
+          <span className='block w-5 h-5'>
+            <Icon className='text-primary transition-colors group-hover:text-primary-hover' />
+          </span>
+        ) }
+        <span className='text-primary font-avenir text-base font-medium transition-colors group-hover:text-primary-hover'>{label}</span>
+      </button>
+    )
+  }
   
   return (
     <button 
-      className={`text-button-lg bg-primary rounded-lg py-2 px-5 flex items-center gap-5 relative disabled:bg-gray-400 transition-colors hover:bg-primary-hover ${logicClasses} ${extraClasses}`}
+      className={`text-button-lg bg-primary rounded-lg py-2 px-5 flex items-center gap-5 relative disabled:bg-gray-400 transition-colors hover:bg-primary-hover ${containedIconClasses} ${extraClasses}`}
       onClick={onClick}
       {...props}
     >

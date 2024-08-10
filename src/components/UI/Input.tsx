@@ -20,8 +20,8 @@ const Input: FC<InputProps> = ({
 
   const activeVisibilityClasses = classNames(isPasswordVisible && 'fill-primary')
   const inputPasswordClasses = classNames(type === 'password' && 'pr-11')
-  const labelErrorClasses = classNames(errors[name] && 'text-error')
-  const inputErrorClasses = classNames(errors[name] && 'border-error focus:border-error text-error placeholder-error')
+  const labelErrorClasses = classNames(errors[name] && '!text-error')
+  const inputErrorClasses = classNames(errors[name] && '!border-error focus:border-error text-error placeholder-error')
   const iconErrorClasses = classNames(errors[name] && 'fill-error hover:fill-error')
 
   const togglePsswordVisibilityHandler = () => {

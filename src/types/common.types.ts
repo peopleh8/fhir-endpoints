@@ -1,6 +1,12 @@
-import { FormEvent, ReactElement, ReactNode } from 'react'
+import { ReactElement, ReactNode } from 'react'
 
 export type ChildType = ReactNode | ReactElement
+
+export enum ButtonVariants {
+  contained = 'contained',
+  outlined = 'outlined',
+  text = 'text'
+}
 
 export interface ChildProps {
   children: ChildType
